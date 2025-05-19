@@ -6,26 +6,35 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E755295D2DD12C78002A658F /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = E755295C2DD12C78002A658F /* ZIPFoundation */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		E75529332DCFF375002A658F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 12;
+			dstPath = /usr/share/man/man1;
 			dstSubfolderSpec = 0;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E75529352DCFF375002A658F /* html2jwpub */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = html2jwpub; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7A04ACF2DD27B8500CD3861 /* html2jwpub */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = html2jwpub; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E75529372DCFF375002A658F /* html2jwpub */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = html2jwpub;
+			sourceTree = "<group>";
+		};
+		E75529512DD0CB85002A658F /* structures */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = structures;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -35,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E755295D2DD12C78002A658F /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,17 +54,10 @@
 		E755292C2DCFF375002A658F = {
 			isa = PBXGroup;
 			children = (
+				E75529512DD0CB85002A658F /* structures */,
 				E75529372DCFF375002A658F /* html2jwpub */,
-				E75529362DCFF375002A658F /* Products */,
+				E7A04ACF2DD27B8500CD3861 /* html2jwpub */,
 			);
-			sourceTree = "<group>";
-		};
-		E75529362DCFF375002A658F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E75529352DCFF375002A658F /* html2jwpub */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,12 +77,14 @@
 			);
 			fileSystemSynchronizedGroups = (
 				E75529372DCFF375002A658F /* html2jwpub */,
+				E75529512DD0CB85002A658F /* structures */,
 			);
 			name = html2jwpub;
 			packageProductDependencies = (
+				E755295C2DD12C78002A658F /* ZIPFoundation */,
 			);
 			productName = html2jwpub;
-			productReference = E75529352DCFF375002A658F /* html2jwpub */;
+			productReference = E7A04ACF2DD27B8500CD3861 /* html2jwpub */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -89,6 +94,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
@@ -106,8 +114,11 @@
 			);
 			mainGroup = E755292C2DCFF375002A658F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E755295B2DD12C78002A658F /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = E75529362DCFF375002A658F /* Products */;
+			productRefGroup = E755292C2DCFF375002A658F;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -291,6 +302,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E755295B2DD12C78002A658F /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.19;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E755295C2DD12C78002A658F /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E755295B2DD12C78002A658F /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E755292D2DCFF375002A658F /* Project object */;
 }
