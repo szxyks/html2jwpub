@@ -770,7 +770,7 @@ COMMIT;
     }
     let Document = "INSERT INTO Document (DocumentId, PublicationId, MepsDocumentId, MepsLanguageIndex, Class, Type, SectionNumber, ChapterNumber, Title, TitleRich, TocTitle, TocTitleRich, ContextTitle, ContextTitleRich, FeatureTitle, FeatureTitleRich, Subtitle, SubtitleRich, FeatureSubtitle, FeatureSubtitleRich, Content, FirstFootnoteId, LastFootnoteId, FirstBibleCitationId, LastBibleCitationId, ParagraphCount, HasMediaLinks, HasLinks, FirstPageNumber, LastPageNumber, ContentLength, PreferredPresentation, ContentReworkedDate) VALUES (?,1,?,?,'13',0,1,NULL,?,NULL,?,NULL,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,?,NULL,NULL,NULL,NULL,254,0,0,1,1,?,NULL,NULL);"
     let TextUnit = "INSERT INTO TextUnit (TextUnitId, Type, Id) VALUES (?,'Document',?);"
-    let PublicationViewItem = "INSERT INTO PublicationViewItem (PublicationViewItemId, PublicationViewId, ParentPublicationViewItemId, Title, TitleRich, SchemaType, ChildTemplateSchemaType, DefaultDocumentId) VALUES (?,1,?,?,NULL,0,NULL,0);"
+    let PublicationViewItem = "INSERT INTO PublicationViewItem (PublicationViewItemId, PublicationViewId, ParentPublicationViewItemId, Title, TitleRich, SchemaType, ChildTemplateSchemaType, DefaultDocumentId) VALUES (?,1,?,?,NULL,0,?,?);"
     let PublicationViewItemDocument = "INSERT INTO PublicationViewItemDocument (PublicationViewItemDocumentId, PublicationViewItemId, DocumentId) VALUES (?,?,?);"
     let PublicationViewItemField = "INSERT INTO PublicationViewItemField (PublicationViewItemFieldId, PublicationViewItemId, Value, ValueRich, Type) VALUES (?,?,?,NULL,'name');"
     let Multimedia = "INSERT INTO Multimedia(MultimediaId, DataType, MajorType, MinorType, MimeType, Caption, FilePath, CategoryType) VALUES(?,?,?,?,?,?,?,?)"

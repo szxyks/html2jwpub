@@ -96,6 +96,8 @@ class JwpubCreator {
             sqlite3_bind_int(insertStatement, 1, 1)
             sqlite3_bind_int(insertStatement, 2, -1)
             sqlite3_bind_text(insertStatement, 3, titleString, -1, nil)
+            sqlite3_bind_int(insertStatement, 4, 0)
+            sqlite3_bind_int(insertStatement, 5, -1)
             if sqlite3_step(insertStatement) == SQLITE_DONE {
                 print("Successfully inserted row.")
             } else {
@@ -173,6 +175,8 @@ class JwpubCreator {
             sqlite3_bind_int(insertStatement, 1, Int32(documentId + 2))
             sqlite3_bind_int(insertStatement, 2, 1)
             sqlite3_bind_text(insertStatement, 3, (title as NSString).utf8String, -1, nil)
+            sqlite3_bind_null(insertStatement, 4)
+            sqlite3_bind_int(insertStatement, 5, Int32(documentId))
             if sqlite3_step(insertStatement) == SQLITE_DONE {
                 print("Successfully inserted row.")
             } else {
@@ -291,7 +295,7 @@ class JwpubCreator {
             manifest.name = "\(self.dbName).jwpub"
             manifest.hash = contentsHash
             manifest.timestamp = timestamp
-            manifest.expandedSize = dbFile.count
+            manifest.expandedSize = contentsFile.count
             manifest.publication.fileName = "\(self.dbName).db"
             manifest.publication.title = pubTitle
             manifest.publication.shortTitle = pubTitle
