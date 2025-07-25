@@ -1,4 +1,4 @@
-# html2jwpup
+# html2jwpub
 
 A simple tool I made to create publications.
 
